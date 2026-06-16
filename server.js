@@ -180,6 +180,11 @@ app.delete("/erros/:id", async (req, res) => {
     }
 });
 
+// Default
+app.get("/", (req, res) => {
+    res.send("API funcionando");
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
